@@ -1,85 +1,70 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <div id="title">
+      <img src="./assets/logo.svg" alt="Vue.js logo">
+      <p>Equipo 4 - Client-Side Framework Vue.js</p>
     </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+        <li class="nav-item"><router-link class="nav-link" :to="{name: 'home'}">Home</router-link></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sintaxis Basica</a>
+          <ul class="dropdown-menu">
+            <li><router-link class="dropdown-item" :to="{name: 'text-interpolation'}">Text Interpolation</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'raw-html'}">Raw HTML</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'attribute-bindings'}">Attribute Bindings</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'javascript-expressions'}">JavaScript Expressions</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'directives'}">Directives</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'conditional-rendering'}">Conditional Rendering</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'list-rendering'}">List Rendering</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'event-handling'}">Event Handling</router-link></li>
+            <li><router-link class="dropdown-item" :to="{name: 'form-input-bindings'}">Form Input Bindings</router-link></li>
+          </ul>
+        </li>
+        <li class="nav-item"><router-link class="nav-link" :to="{name: 'about'}">About</router-link></li>
+      </ul>
+      </div>
+    </nav>
+    
   </header>
 
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+
+  <footer>
+    <p>Estudiantes:</p>
+    <p>Andrey Jimenez Porras</p>
+    <p>Rafael Eduardo Alvarado Zuñiga</p>
+    <p>Rodrigo Ugalde Calix</p>
+    <p>Santiago Gerardo Alvarez Alvarez</p>
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
+#title {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  height: 75px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+#title img {
+  height: 60px;
+  width: auto;
+  margin-left: 15px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+#title p {
+  margin-right: 15px;
+  margin-left: auto;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
 
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>
