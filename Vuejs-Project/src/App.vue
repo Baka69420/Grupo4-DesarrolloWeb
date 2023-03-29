@@ -38,15 +38,31 @@ import { RouterLink, RouterView } from 'vue-router'
   </main>
 
   <footer>
-    <p>Estudiantes:</p>
-    <p>Andrey Jimenez Porras</p>
-    <p>Rafael Eduardo Alvarado Zuñiga</p>
-    <p>Rodrigo Ugalde Calix</p>
-    <p>Santiago Gerardo Alvarez Alvarez</p>
+    <div id="info-estudiantes">
+      <p>Este sitio fue creado por los Estudiantes:</p>
+      <ul id="estudiantes">
+        <li>Andrey Jimenez Porras</li>
+        <li>Rafael Eduardo Alvarado Zuñiga</li>
+        <li>Rodrigo Ugalde Calix</li>
+        <li>Santiago Gerardo Alvarez Alvarez</li>
+      </ul>
+    </div>
+    <h2>Equipo 4 <br> Client-Side Framework Vue.js</h2>
+    <div id="info-curso">
+      <p>Curso:</p>
+      <p>Diseno de Aplicaciones Web (ISW-512)</p>
+      <br>
+      <p>Profesor:</p>
+      <p>Sergio Enrique Gonzalez Salazar</p>
+    </div>
   </footer>
 </template>
 
 <style scoped>
+h2 {
+  text-align: center;
+}
+
 #title {
   width: 100%;
   height: 75px;
@@ -66,5 +82,36 @@ import { RouterLink, RouterView } from 'vue-router'
   margin-left: auto;
 }
 
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: grey;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+footer div {
+  margin: 20px;
+  border: 2px black solid;
+  padding: 5px;
+}
+
+footer #info-estudiantes {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+footer #info-curso {
+  margin-right: 0;
+  margin-left: auto;
+}
 
 </style>
