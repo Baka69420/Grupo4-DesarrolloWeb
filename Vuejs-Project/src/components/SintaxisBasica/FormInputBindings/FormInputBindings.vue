@@ -168,11 +168,11 @@ export default {
 .ejemplos {
    margin: 60px;
     width: 70%;
-}
+} 
+
 h1{
     text-align: justify;
 }
-
 .textarea {
     width: 70%;
 }
