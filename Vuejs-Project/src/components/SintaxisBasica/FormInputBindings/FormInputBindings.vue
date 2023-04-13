@@ -74,7 +74,12 @@
 
     <div class="ejemplos">
      
-        <input v-model.lazy="msg" />
+      <form @submit.prevent="submitForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" v-model.lazy="form.name" />
+      <p>Nombre: "{{ form.name }}"</p>
+    </form>
+
     </div>
 
     <div class="ejemplos">
@@ -97,6 +102,7 @@
         <input type="number" v-model="edad" placeholder="Ingrese su edad">
        
     </div>
+    
     <label>
             <input type="checkbox" v-model="isChecked">
 
@@ -123,7 +129,8 @@ export default {
                 { text: 'TRES', value: 'C' }
             ],
             msg: "",
-        trimmedMsg: ""
+        trimmedMsg: "",
+        name: "",
         };
     },
     methods: {
@@ -140,6 +147,7 @@ export default {
         onInputChange() {
                 this.trimmedMsg = this.msg.replace(/\s+/g, ""); // Eliminar espacios en blanco
             }
+        
     }
     
 }
