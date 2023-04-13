@@ -5,56 +5,56 @@
     <div>
         <br>
         <h2>Ejemplo 1 - Text Interpolation</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'text-interpolation'}">Ver Ejemplo de Text Interpolation</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 2 - Raw HTML</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'raw-html'}">Ver Ejemplo de Raw HTML</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 3 - Attribute Bindings</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'attribute-bindings'}">Ver Ejemplo de Attribute Bindings</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 4 - JavaScript Expressions</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'javascript-expressions'}">Ver Ejemplo de JavaScript Expressions</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 5 - Directives</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'directives'}">Ver Ejemplo de Directives</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 6 - Conditional Rendering</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'conditional-rendering'}">Ver Ejemplo de Conditional Rendering</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 7 - List Rendering</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'list-rendering'}">Ver Ejemplo de List Rendering</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 8 - Event Handling</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'event-handling'}">Ver Ejemplo de Event Handling</router-link></button>
+        <p><br></p>
     </div>
     <div>
         <br>
         <h2>Ejemplo 9 - Form Input Bindings</h2>
-        <p>Definicion: Hace cosas</p>
         <button><router-link class="dropdown-item" :to="{name: 'form-input-bindings'}">Ver Ejemplo de Form Input Bindings</router-link></button>
+        <p><br></p>
     </div>
 </template>
 
