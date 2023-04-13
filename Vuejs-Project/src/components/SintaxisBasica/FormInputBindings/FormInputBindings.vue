@@ -27,16 +27,16 @@
     </div>
     <div class="ejemplos">
         <h1>Check Box con un valor preterminado cuando es verdadero o falso.</h1>
-        
+
         <input type="checkbox" v-model="toggle" true-value="yes" false-value="no" />
-    
+
     </div>
 
     <div class="ejemplos">
         <h1>Radius botton</h1>
         <div>Precionado: {{ picked }}</div>
 
-        <input type="radio" class="radio" value="Uno"  v-model="picked"  />
+        <input type="radio" class="radio" value="Uno" v-model="picked" />
         <label class="label" for="uno">Uno</label>
         <input type="radio" class="radio" value="Dos" v-model="picked" />
         <label class="label" for="dos">Dos</label>
@@ -73,25 +73,27 @@
 
 
     <div class="ejemplos">
-     
-      <form @submit.prevent="submitForm">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" v-model.lazy="form.name" />
-      <p>Nombre: "{{ form.name }}"</p>
-    </form>
+        <h1>.lazy</h1>
+        <p>Nombre: "{{ name }}"</p>
+        <label for="name"></label>
+        <input type="text" id="name" v-model.lazy="name" />
+
+      
 
     </div>
+    <button id = "boton" @click="submitForm">Enviar</button>
 
+    <h1 id="num">.number</h1>
     <div class="ejemplos">
-        <input v-model.number="age" />
+        <label id="edad" for="age">Edad:</label>
+        <input type="number" id="age" v-model.number="age" />
     </div>
     <div class="ejemplos">
-        <input v-model.trim="msg"  @input="onInputChange"/>
+        <h1>.trim</h1>
+        <input v-model.trim="msg" @input="onInputChange" />
         <p>Texto sin espacios en blanco: "{{ trimmedMsg }}"</p>
     </div>
-    <div class="ejemplos">
 
-    </div>
     <div>
         <h1>Formulario</h1>
     </div>
@@ -100,20 +102,20 @@
         <input type="email" v-model="correo" placeholder="Ingrese su correo electrónico">
         <input type="password" v-model="contrasena" placeholder="Ingrese su contraseña">
         <input type="number" v-model="edad" placeholder="Ingrese su edad">
-       
-    </div>
-    
-    <label>
-            <input type="checkbox" v-model="isChecked">
 
-            <a href="#terminos" target="_blank">Acepto los Términos y Condiciones</a>
-        </label>
-        <button @click="enviarFormulario">Enviar</button>
+    </div>
+
+    <label>
+        <input type="checkbox" v-model="isChecked">
+
+        <a href="#terminos" target="_blank">Acepto los Términos y Condiciones</a>
+    </label>
+    <button @click="enviarFormulario">Enviar</button>
 </template>
 
 <script>
 export default {
-   
+
     data() {
         return {
 
@@ -129,8 +131,8 @@ export default {
                 { text: 'TRES', value: 'C' }
             ],
             msg: "",
-        trimmedMsg: "",
-        name: "",
+            trimmedMsg: "",
+            name: "",
         };
     },
     methods: {
@@ -142,14 +144,17 @@ export default {
             console.log('Contraseña:', this.contrasena);
             console.log('Edad:', this.edad);
             console.log('Acepto términos:', this.aceptoTerminos);
-            
+
         },
         onInputChange() {
-                this.trimmedMsg = this.msg.replace(/\s+/g, ""); // Eliminar espacios en blanco
-            }
-        
+            this.trimmedMsg = this.msg.replace(/\s+/g, ""); // Eliminar espacios en blanco
+        },
+        submitForm() {
+            // Lógica para enviar los datos del formulario
+            console.log("Formulario enviado:", this.name);
+        }
     }
-    
+
 }
 
 
@@ -161,28 +166,44 @@ export default {
 
 <style>
 .ejemplos {
-    margin: 40px;
+   margin: 60px;
     width: 70%;
+}
+h1{
+    text-align: justify;
 }
 
 .textarea {
     width: 70%;
 }
-.radio{
+
+.radio {
     width: 20%;
 }
-.label{
+
+.label {
     width: 80%;
-    padding-right: 100px;    
+    padding-right: 100px;
 }
-.paises{
+#boton{
+    width: 20%;
+    margin-left: 70px;
+    margin-top: -10px;
+}
+#num{
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-bottom: -50px;
+}
+.paises {
     width: 15%;
     margin-right: 10px;
 }
-.paisesnombre{
 
-text-align: right;
- 
+.paisesnombre {
+
+    text-align: right;
+
 }
 
 /* Estilos para los campos de entrada */
@@ -210,6 +231,9 @@ div input:disabled {
 
 #check {
     float: left;
+}
+#edad{
+    width: 60%;
 }
 
 
@@ -251,5 +275,4 @@ input[type="checkbox"]:checked::after {
     position: absolute;
     top: 3px;
     left: 5px;
-}
-</style>
+}</style>
