@@ -3,7 +3,7 @@
     <h2>Descripcion:</h2>
     <p>Esto no es completamente parte de Vue.js, es mas parte del sintaxis de JavaScript, pero si es muy importante de saber ya que es la manera de como calculan datos y se coloca la informacion en las variables.<br></p>
     <h2>Ejemplo:</h2>
-    <p>En el siguiente ejemplo veremos el espacio de resultado que es una variable que usa<router-link :to="{name: 'attribute-bindings'}">Attribute Bindings</router-link></p>
+    <p>En el siguiente ejemplo veremos el espacio de resultado que es una variable que usa <router-link :to="{name: 'text-interpolation'}">Text Interpolation</router-link></p>
     <p>Dicha variable va a ser modificada por medio de un metodo cuando se precione el boton calcular.</p>
     <p>Dicho metodo unicamente va a hacer uso de expresiones de aritmetica para realizar la suma y expresiones de asignacion para asignar el valor de la suma en la variable resultado.</p>
     <div id="ejemplo">
