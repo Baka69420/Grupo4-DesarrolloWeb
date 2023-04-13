@@ -156,15 +156,9 @@ export default {
     }
 
 }
-
-
-
-
-
-
 </script>
 
-<style>
+<style scoped>
 .ejemplos {
    margin: 60px;
     width: 70%;
