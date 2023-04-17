@@ -11,10 +11,10 @@
         <input type="text" v-model="valorBusqueda" placeholder="Ingrese el valor a buscar">
         <p></p>
         <div class="resultado" v-if="valorBusqueda.toLocaleLowerCase() === 'gato'">
-            <img src="cat.jpeg" alt="foto de gato">
+            <img src="@/assets/images/cat.jpeg" alt="foto de gato">
         </div>
         <div class="resultado" v-else-if="valorBusqueda.toLocaleLowerCase() === 'perro'">
-            <img src="dog.jpg" alt="foto de perro">
+            <img src="@/assets/images/dog.jpg" alt="foto de perro">
         </div>
         <div class="resultado" v-else-if="valorBusqueda.toLocaleLowerCase() === 'rickroll'">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

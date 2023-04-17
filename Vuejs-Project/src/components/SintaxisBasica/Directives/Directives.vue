@@ -11,7 +11,7 @@
     <p>En este ejemplo se hizo uso de la directiva "v-show", que hace casi lo mismo que "v-if", solo que son diferentes ya que "v-show" hace el cambio al display del objeto, mientras que "v-if" destruye y reconstruye el objeto a como sea necesario.</p>
     <div id="ejemplo">
         <h2>Visualizador de imagen</h2>
-        <img v-show="verImagen" src="cat.jpeg" alt="foto de gato">
+        <img v-show="verImagen" src="@/assets/images/cat.jpeg" alt="foto de gato">
         <p></p>
         <button v-on:click="cambiarVisualizacion()" v-text="buttonName"></button>
     </div>
